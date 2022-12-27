@@ -1,0 +1,1243 @@
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>월드 | 랭킹 | 메이플스토리</title>
+<link rel="stylesheet" href="https://lwres.nexon.com/css/maplestory/sub_new.css" type="text/css" />
+<link rel="stylesheet" href="https://lwres.nexon.com/css/maplestory/jquery.mCustomScrollbar.css" type="text/css" />
+<script src="https://ssl.nexon.com/s1/p2/ps.min.js" charset="utf-8" data-name="PS" data-ngm="true" data-nxlogin="true"></script>
+    <script src="https://ssl.nexon.com/s1/global/ngb_head.js"></script>
+
+<script src="https://lwres.nexon.com/js/maplestory/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="https://lwres.nexon.com/js/maplestory/jquery-ui.js"></script>
+<script src="https://lwres.nexon.com/js/maplestory/sub_new.js" type="text/javascript"></script>
+<script src="https://lwres.nexon.com/js/maplestory/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+
+<script src="/Scripts/Common/common.js?v=202212270939"></script>
+<script src="/Scripts/Common/webboard.js?v=202212270939"></script>
+
+<script>
+    var COMMON = (function () {
+        var instance;
+
+        function initiate() {
+            return {
+                site: 'nope',
+                domain: 'maplestory.nexon.com',
+                url: 'https://maplestory.nexon.com/Ranking/World/Total?c=%EC%A2%85%EB%A1%9C%EA%B5%AC%EC%8B%AC%EC%85%94%ED%8B%80',
+                oid: '0',
+                isLogin: false,
+                isMembership: false,
+                isParentLogin: false,
+                isParentMembershipLogin: false,
+                isChannelingNotAgree: false,
+                articleSearchDescriptor: {},
+                maxTitleLength: 0,
+                maxCommentLength: 0
+            };
+        }
+
+        if (!instance) instance = initiate();
+        return instance;
+    }());
+
+    $(window).load(function () {
+        var commonMessage = '';
+        if (commonMessage !== '')
+            alert(commonMessage);
+    });
+</script>
+
+
+
+<link rel="stylesheet" href="/Scripts/Common/font_NanumBarunGothic.css" type="text/css" />
+<!-- Facebook Pixel Code -->
+<script type="text/javascript">    
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+     fbq('init', '268046720223120');
+    fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=268046720223120&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Twitter single-event website tag code -->
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('nx5i7', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nx5i7&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nx5i7&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+<!-- End Twitter single-event website tag code -->
+<script type="text/javascript">
+    (function (m, o, n, r, t, g) {
+        t = t + '?l=' + n + '&t=' + r + '&ref=' + encodeURIComponent(o.referrer) + '&loc=' + encodeURIComponent(o.location) + '&r=' + Math.floor(Math.random() * 99999999999);
+        o.write("<" + g + " src='" + t + "' style='display:none;'></" + g + ">");
+    })(window, document, 'CM_M_1042938', 'brand', 'https://rtb.clickmon.co.kr/RT_GATE/rt_gate.php', 'iframe');
+</script>
+
+        <!-- Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src=https://www.googletagmanager.com/gtag/js?id=UA-34233427-4></script>
+        <script async src=https://www.googletagmanager.com/gtag/js?id=AW-947932633></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-34233427-4', { 'custom_map': { 'dimension1': 'oid' } });
+            gtag('config', 'G-12M3M6FCC2');
+            gtag('event', 'oid', { 'oid': 0 })
+            gtag('config', 'AW-947932633');
+            gtag('event', 'conversion', { 'send_to': 'AW-947932633/0AANCOGi_IkCENmbgcQD' });
+            function gtag_report_conversion(url) {
+                var callback = function () {
+                    if (typeof (url) != 'undefined') {
+                        window.location = url;
+                    }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-947932633/DKSpCOK-_IkCENmbgcQD',
+                    'event_callback': callback
+                });
+                return false;
+            }
+        </script>
+        <!-- End Google Analytics -->
+<!-- Kakao Pixel Code -->
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+    kakaoPixel('2830029952607077079').pageView();
+</script>
+<!-- End Kakao Pixel Code -->
+<!-- Criteo 홈페이지 태그 -->
+<script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=94120" async="true"></script>
+<script type="text/javascript">
+    window.criteo_q = window.criteo_q || [];
+    var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+    window.criteo_q.push({ event: "setAccount", account: [94120, 95207] }, { event: "setSiteType", type: deviceType }, { event: "viewHome" });
+
+    function gameStart_Criteo() {
+        window.criteo_q.push(
+            { event: "setAccount", account: [94120, 95207] },
+            { event: "setSiteType", type: deviceType },            
+            {
+                event: "trackTransaction", id: Math.floor(Math.random() * 99999999999), item: [
+                    { id: "gameStart", price: 1, quantity: 1 }                    
+                ]
+            }
+        );
+    }
+</script>
+<!-- END Criteo 홈페이지 태그 -->
+
+
+<script>
+    var condition = {"page":1,"c":"종로구심셔틀","j":255,"d":255,"w":0,"t":255,"n":null,"g":255,"k":null};
+    var isReboot = false;
+
+    $(function () {
+        cus_sel2();
+        ser_sel_cus2();
+        /*랭킹 관련 검색 영역 Select 박스 커스텀*/
+        rank_select_custom();
+    });
+    $(document).ready(function () {
+        //직업 검색 함수
+        var searchJob = function (e) {
+            e.preventDefault();
+            var job = $('.rank_search_wrapper select[name=job]').val();
+            var jobDetail = $('.rank_search_wrapper select[name=jobdetail]').val();
+            RANKING.sortByJob(condition, job, jobDetail);
+        }
+
+        //월드 변경
+        $('.rank_search_wrapper .word_chk_wrap2 li a').bind('click', function (e) {
+            e.preventDefault();
+            var world = $(e.currentTarget).siblings("input[type=radio]").val();
+            RANKING.sortByWorld(condition, world);
+        });
+        //유니온 아레나 랭킹 월드 변경
+        $('.rank_search_wrapper .word_chk_wrap3 li a').bind('click', function (e) {
+            e.preventDefault();
+            var world = $(e.currentTarget).siblings("input[type=radio]").val();
+            RANKING.sortByWorld(condition, world);
+        });
+        //유니온 아레나 랭킹 시즌 선택
+        $('.rank_search_wrapper select[name=season]').bind('change', function (e) {
+            e.preventDefault();
+            var seasonID = $('.rank_search_wrapper select[name=season]').val();     
+            RANKING.sortByArenaSeasonType(condition, seasonID);
+        });
+        //캐릭터 검색 엔터키처리
+        $('.ranking_search_bar .ranking_search_bar_input input[name=search_text]').bind('keydown', function (e) {
+            UTILITY.onEnterKeyDown(e.currentTarget, function () {
+                var character = $(e.currentTarget).val();
+                //var world = (isReboot) ? 254 : 255;
+                var world = $("input:radio[name='world_radio']:checked").val()
+                RANKING.searchByCharacter(condition, character, world);
+            });
+        });
+        //캐릭터 검색
+        $('.ranking_search_bar .ranking_search_bar_input a').bind('click', function (e) {
+            e.preventDefault();
+            var character = $('.ranking_search_bar .ranking_search_bar_input input[name=search_text]').val();
+            //var world = (isReboot) ? 254 : 255;
+            var world = $("input:radio[name='world_radio']:checked").val()
+            RANKING.searchByCharacter(condition, character, world);
+        });
+        //직업 대분류 선택
+        $('.rank_search_wrapper select[name=job]').bind('change', function (e) {
+            e.preventDefault();
+            var job = $('.rank_search_wrapper select[name=job]').val();
+            var jobDetailObj = $('.rank_search_wrapper select[name=jobdetail]');
+
+            //if (job <= 0) {
+            //    jobDetailObj.html('<option value="-1">[전체]</option>');
+            //    reset_cus_sel2();
+            //    return;
+            //}
+
+            $.ajax({
+                url: '/common/character/data/job/' + job + '/details',
+                success: function (data) {
+                    jobDetailObj.html(data);
+                    rank_sel_ajax();
+                    $(".rank_sel_custom:eq(1) a.select_text").text("선택해주세요");
+                    $(".rank_sel_custom:eq(1) ul li").bind("click", searchJob);
+                },
+                error: function (a, b) {
+                    alert('error!');
+                }
+            });
+        });
+        //직업 검색
+        $('.rank_sel_custom:eq(1) ul li').bind('click', searchJob);
+        //주 단위 sort(도장/시드)
+        $('.dojang_week a').bind('click', function (e) {
+            e.preventDefault();
+            var url = $(e.currentTarget).attr('href');
+            var index = (url.toLowerCase().indexOf('lastweek') != -1) ? 1 : 0;
+            RANKING.sortByWeek(condition, (index == 1) ? 'lastweek' : 'thisweek');
+        });
+        //타입별 sort(도장)
+        $('.reach_layer li a').bind('click', function (e) {
+            e.preventDefault();
+            var index = $('.reach_layer li a').index(e.currentTarget);
+            index = (index === 1) ? 2 : index;  //숙련등급(1) 삭제로 보정 처리
+            RANKING.sortByType(condition, index);
+        });
+        //타입별 sort(길드)
+        $('#guildRankType li a').bind('click', function (e) {
+            e.preventDefault();
+            var index = $('#guildRankType li a').index(e.currentTarget);
+            if (index != 2)
+                index = (index === 0) ? 1 : 0;  //(0 : 플레그 레이스, 1 : 주간 명성치, 2: 지하수로) 보정 처리
+
+            RANKING.sortByGuildType(condition, index);
+        });
+        //랭킹 별 현재 월드
+        $('.tab_wrap .tab a').bind('click', function (e) {
+            e.preventDefault();
+            var world = $('.w_board_top_wrap select').val();
+            var path = $(e.currentTarget).attr("href");
+            RANKING.linkByWorld(condition, world, path);
+        });
+        //월드 리부트 월드의 전체월드 바로가기
+        $('.w_board_top_wrap .rank_sort li').bind('click', function (e) {
+            e.preventDefault();
+            var worldType = $(e.currentTarget).attr('name');
+            var world = 255;
+            if (worldType === 'reboot') {
+                world = 254;
+            }
+            RANKING.sortByWorld(condition, world);
+        });
+        //유니온랭킹 월드 변경
+        $('.rank_search_wrapper .rank_search_tb .word_chk_wrap2 a').bind("click", function (e) {
+            e.preventDefault();
+            var world = $(e.currentTarget).siblings("input[type=radio]").val();
+            RANKING.sortByWorld(condition, world);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('').bind('click', function () {
+
+        });
+    });
+
+    $(function () {
+        board_sort_sel();
+        ser_sel_cus();
+        $(".rank_sel_custom:eq(0) a.select_text").text($("select[name=job] option").filter(":selected").text());
+        $(".rank_sel_custom:eq(1) a.select_text").text($("select[name=jobdetail] option").filter(":selected").text());
+    });
+    $(window).load(function () {
+        mnb_setting();
+    });
+</script>
+</head>
+<body>
+
+
+    <script type="text/javascript" src="https://rs.nxfs.nexon.com/common/js/gnb.min.js" data-gamecode="589824" data-ispublicbanner="false"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.sel_login_btn a:eq(0)').bind('click', function (e) {
+            e.preventDefault();
+            LOGIN.changeID();
+        });
+        $('.sel_login_btn a:eq(1)').bind('click', function (e) {
+            e.preventDefault();
+            close_login_pop();
+        });
+    });
+</script>
+<div class="login_popup_wrap">
+    <div class="login_popup2">
+        <h1><span><a href="javascript:void(0)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/login_pop_h1.png" alt="다른 메이플ID로 로그인" /></a></span></h1>
+        <div class="login_popup_con">
+            <p>다른 메이플ID로 로그인 하시려면 아래의 ID중 하나를 선택하시기 바랍니다.</p>
+            <div class="sel_login_id">
+            </div>
+            <div class="bnarea">
+                <p class="icoinfo">
+                    <input type="checkbox" name="chkMaster" /> <label for="che">앞으로 이 메이플ID로 로그인 하겠습니다.</label>
+                </p>
+            </div>
+            <div class="sel_login_btn">
+                <a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/sel_login_btn.png" alt="선택한 메이플ID로 로그인" /></a>
+                <a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_pop_close_btn.png" alt="닫기" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="skip-navigation">
+    <ul>
+        <li><a class="skip-navigation-link" href="#section02">본문 바로가기</a></li>
+        <li><a class="skip-navigation-link" href="#section01">주 메뉴 바로가기</a></li>
+    </ul>
+</div>
+
+    <div id="wrap">
+<!-- header str -->
+<div id="header_ranking">
+    <div class="sub_banner_wrap">
+        <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/sub_visual/ranking.png" alt="" />
+    </div>
+    <div class="top_menu_wrap">
+        <div class="div_inner">
+<h1 class="logo"><a href="/Home/Main"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/logo.png" alt="" /></a></h1>
+
+<ul class="top_menu">
+    <li>
+        <a href="/News/Notice">뉴스</a>
+        <ul>
+            <li><a href="/News/Notice">공지사항</a></li>
+            <li><a href="/News/Update">업데이트</a></li>
+            <li><a href="/News/Event">이벤트</a></li>
+            <li><a href="/News/CashShop">캐시샵 공지</a></li>
+            
+            <li><a href="/News/NoticeMapleBoard">메이플 알림판</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/Guide/GameInformation">가이드</a>
+        <ul>
+            <li><a href="/Guide/GameInformation">게임정보</a></li>
+            <li><a href="/Guide/Quest">퀘스트정보</a></li>
+            <li><a href="/Guide/Job" target="_blank">직업소개<span class="icon_window"></span></a></li>
+            <li><a href="/Guide/CashShop/Probability/RoyalStyle">확률형 아이템</a></li>
+            <li><a href="/Guide/ProbabilityResult/MonthData">확률형 아이템 결과</a></li>
+            <li><a href="https://now.nexon.com/service/maplestory" target="_blank">NEXON NOW<span class="icon_window"></span></a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/Ranking/World">랭킹</a>
+        <ul>
+            <li><a href="/Ranking/World">월드 랭킹</a></li>
+            <li><a href="/Ranking/Union">유니온 랭킹</a></li>
+            <li><a href="/Ranking/Achievement">업적 랭킹</a></li>
+            <li><a href="/Ranking/HallOfFame">명예의 전당</a></li>
+            <li><a href="/Ranking/UnionArena">유니온 아레나</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/Community/Free">커뮤니티</a>
+        <ul>
+            <li><a href="/Community/Free">자유게시판</a></li>
+            <li><a href="/Community/Information">정보게시판</a></li>
+            
+            <li><a href="/Community/TopicDiscussion">토론게시판</a></li>
+            <li><a href="/Community/Art">메이플 아트</a></li>
+            <li><a href="/Community/Coordination">메이플 코디</a></li>
+                <li><a href="/Community/TimeOpenEvent">이벤트게시판</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/Media/WebToon">미디어</a>
+        <ul>
+            <li><a href="/Media/WebToon">웹툰</a></li>
+            <li><a href="/Media/Font">메이플스토리 서체</a></li>
+            <li><a href="/Media/Video">영상</a></li>
+            <li><a href="/Media/Music">음악</a></li>
+            <li><a href="/Media/ArtWork">아트웍</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/Support/UnSeal">고객지원</a>
+        <ul>
+                <li><a href="javascript:void(0);" onclick="window.open('https://cs.nexon.com/HelpBoard/Nexon?gamecode=18', '메이플스토리 고객센터', 'toolbar=no, scrollbars=yes, width=1024, height=800'); return false;">도움말/1:1문의<span class="icon_window"></span></a></li>
+                <li><a href="/Support/UnSeal">아이템 봉인해제</a></li>
+                <li><a href="/Support/BugReport">버그악용/불법프로그램 신고</a></li>
+        </ul>
+    </li>
+</ul>
+        </div>
+    </div>
+    <div class="div_inner">
+<div class="board_name">
+    <span class="sub_logo"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/category_icon08.png" alt=""></span>
+    <h2>랭킹</h2>
+</div>
+
+
+<script>
+    //$(document).ready(function () {
+    //    $('.naver_btn.lin a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        doLogin();
+    //    });
+    //    $('.naver_btn.agree3 a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        goAuthorize('https://maplestory.nexon.game.naver.com');
+    //    });
+    //    $('.nv_btn.findid a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        gdp.jslib.goLink('FindID');
+    //    });
+    //    $('.nv_btn.findpw a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        gdp.jslib.goLink('FindPW');
+    //    });
+    //    $('.nv_btn.myinfo a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        gdp.jslib.goLink('MyInfo');
+    //    });
+    //    $('.sub_logout a').bind('click', function (e) {
+    //        e.preventDefault();
+    //        doSiteLogout();
+    //    });
+    //});
+
+    function NaverChannelingEndInformationPop() {       
+        var xPos = (document.body.clientWidth / 2) - (700 / 2);
+        xPos += window.screenLeft;
+        var yPos = (screen.availHeight / 2) - (400 / 2);
+        var pop = window.open('/News/Popup/2020/NaverChannelingEnd', 'NaverChannelingEndInformation', 'toolbar=no, scrollbars=yes, width=700, height=400, left=' + xPos + ', top=' + yPos);
+        if (pop === null) {
+            alert('2020년 12월 1일 메이플스토리의 네이버 채널링 서비스가 종료됩니다.\n2020년 10월 30일부터 네이버 채널링 서비스 신규 가입을 하실 수 없습니다.');
+        }
+    }            
+</script>
+
+            <div class="sub_login_wrap">
+                <div class="sub_login_con">
+                    <span class="sub_login_btn"><a href="/Authentication/Login?redirectTo=https://maplestory.nexon.com/Ranking/World/Total?c=%EC%A2%85%EB%A1%9C%EA%B5%AC%EC%8B%AC%EC%85%94%ED%8B%80" onmouseover="ch_png_on(this)" onmouseout="ch_png_off(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/sub_login_btn_off.png" alt="메이플 스토리 로그인"></a></span>
+                </div>
+                <!--로그인전 노출 : Str-->
+                <script>
+                    $(function () {
+                        setInterval(befor_login_char, 100);
+                    });
+                </script>
+                <span class="sub_login_befor_char">
+                    <div class="mv_clip">
+                        <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/login_char_ranking.png" alt="">
+                    </div>
+                </span>
+                <!--로그인전 노출 : End-->
+            </div>
+
+        
+
+
+<span class="game_start">
+    <div class="gm_str_main_wrap">
+        
+
+                    <a href="javascript:void(0)" onclick="alert('로그인 후 메이플ID 생성이 필요합니다.')"><img class="main_str_btn" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/mp_start_btn_sub.png" alt="" /></a>
+
+
+    </div>
+        <span class="download"><a href="/Common/PDS/Download" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/sub_game_down.png" alt="" /></a></span>
+</span>
+    </div>
+<div class="top_menu_bg">
+    <div class="div_inner" style="background:url('https://ssl.nexon.com/s2/game/maplestory/renewal/common/top_menu_line.png') left top no-repeat;"></div>
+</div>
+
+
+<!-- event_bg str -->
+<div class="event_bg">
+    <!-- div_inner str -->
+    <div class="div_inner">
+        <h2 class="event_all_title">이벤트 전체보기</h2>
+        <div class="event_all_bannerwrap">
+            <ul class="event_all_banner">
+
+                    <li>
+                        <a href="/News/Event/696"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5701596856698542193" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/696">웡스토랑</a></dt>
+                            <dd><a href="/News/Event/696">2022.12.22 (목) ~ 2023.03.01 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/695"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053078510357190701" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/695">하이퍼 버닝</a></dt>
+                            <dd><a href="/News/Event/695">2022.12.22 (목) ~ 2023.03.01 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/694"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053078445932679287" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/694">버닝 월드</a></dt>
+                            <dd><a href="/News/Event/694">2022.12.22 (목) ~ 2023.03.15 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/693"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5269251326830712344" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/693">월드 리프</a></dt>
+                            <dd><a href="/News/Event/693">2022.12.22 (목) ~ 2023.01.05 (목) 오전 10시00분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/692"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557481733047195828" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/692">(수정) 웡스토랑 메인 메뉴</a></dt>
+                            <dd><a href="/News/Event/692">2022.12.22 (목) ~ 2023.03.01 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/691"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557481638557914396" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/691">요정 웡키의 그리팅 위크</a></dt>
+                            <dd><a href="/News/Event/691">2022.12.22 (목) ~ 2022.12.28 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/690"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413366433302187800" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/690">웡스토랑 코인샵</a></dt>
+                            <dd><a href="/News/Event/690">2022.12.22 (목) ~ 2023.03.05 (일) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/689"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197193634008534893" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/689">웡스토랑 보스 코인샵</a></dt>
+                            <dd><a href="/News/Event/689">2022.12.22 (목) ~ 2023.03.05 (일) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/688"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629539202531071110" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/688">(수정) 슈피겔만의 투게더 위크</a></dt>
+                            <dd><a href="/News/Event/688">2022.12.29 (목) ~ 2023.01.04 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/687"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764848125615543117" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/687">(수정) 껨디의 미니게임 위크</a></dt>
+                            <dd><a href="/News/Event/687">2023.01.05 (목) ~ 2023.01.11 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/686"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4981020856189718209" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/686">마이크의 파워업 위크</a></dt>
+                            <dd><a href="/News/Event/686">2023.01.12 (목) ~ 2023.01.18 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/685"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485424014455214731" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/685">루디와 거대한 트리</a></dt>
+                            <dd><a href="/News/Event/685">2022.12.22 (목) ~ 2022.12.28 (수) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/684"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836905702473601987" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/684">프리미엄PC방 접속 보상 이벤트</a></dt>
+                            <dd><a href="/News/Event/684">2022.12.23 (금) ~ 2023.02.02 (목) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/News/Event/682"><img src="https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764848142795413934" alt="" /></a>
+                        <dl>
+                            <dt><a href="/News/Event/682">현생 용사를 위한 겨울 버전 메꾸 패키지</a></dt>
+                            <dd><a href="/News/Event/682">2022.12.09 (금) ~ 2023.01.31 (화) 오후 11시59분</a></dd>
+                        </dl>
+                    </li>
+                                    <li>
+                        <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/zzzzzzzz.png" alt="">
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/zzzzzzzz.png" alt="">
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+            </ul>
+        </div>
+        <ul class="event_all_pos">
+                    <li><a href="#a" onclick="img_click(this)" onmouseover="img_on(this)" onmouseout="img_out(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/pos_event_on.png" alt="" class=click_img /></a></li>
+                    <li><a href="#a" onclick="img_click(this)" onmouseover="img_on(this)" onmouseout="img_out(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/pos_event_off.png" alt=""  /></a></li>
+                    <li><a href="#a" onclick="img_click(this)" onmouseover="img_on(this)" onmouseout="img_out(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/pos_event_off.png" alt=""  /></a></li>
+                    <li><a href="#a" onclick="img_click(this)" onmouseover="img_on(this)" onmouseout="img_out(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/pos_event_off.png" alt=""  /></a></li>
+
+        </ul>
+        <span class="event_close"><a href="#a" onclick="event_onoff()"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/event_close.png" alt="" /></a></span>
+    </div>
+    <!-- div_inner end -->
+</div>
+<!-- event_bg end -->
+
+</div>
+<!-- header end -->
+
+<div class="mnb_wrap">
+    <div class="div_inner2">
+        <ul class="mnb_list">
+            <li class=active><a href="/Ranking/World">월드 랭킹</a></li>
+            <li ><a href="/Ranking/Union">유니온 랭킹</a></li>
+            <li ><a href="/Ranking/Achievement">업적 랭킹</a></li>
+            <li ><a href="/Ranking/HallOfFame">명예의 전당</a></li>
+            <li ><a href="/Ranking/UnionArena">유니온 아레나</a></li>
+        </ul>
+        <span class="mnb_line"></span>
+    </div>
+</div>
+<div class="mnb_blank"></div>
+
+        <!-- container str -->
+        <div id="container">
+            <!-- div_inner str -->
+            <div class="div_inner">
+                <!-- notice_wrap str -->
+                <div class="contents_wrap2">
+                    <h1 class="con_title">
+                        월드 랭킹
+                        <ul class="rank_info_list">
+                            
+                            <li class="befor_rank"><a href="https://archive.maplestory.nexon.com/ranking/phase3" target="_blank">이전 랭킹 확인하기</a></li>
+                            <li><a href="javascript:void(0);" onclick="open_rank_pop();">랭킹 산정 안내</a></li>
+                        </ul>
+                    </h1>
+<!--검색 펼침-->
+<div class="rank_search_wrapper">
+    <table class="rank_search_tb">
+        <colgroup>
+            <col width="100px" />
+            <col width="291px" />
+            <col width="101px" />
+            <col width="*" />
+        </colgroup>
+        <tr>
+<th>랭킹</th>
+<td colspan="3">
+    <ul class="rank_select">
+        <li class=active><a href="/Ranking/World/Total">종합 랭킹</a></li>
+        <li ><a href="/Ranking/World/Pop">인기도 랭킹</a></li>
+        <li ><a href="/Ranking/World/Guild">길드 랭킹</a></li>
+        <li ><a href="/Ranking/World/Dojang">무릉도장 랭킹</a></li>
+        <li ><a href="/Ranking/World/Seed">더 시드 랭킹</a></li>
+    </ul>
+</td>
+        </tr>
+        <tr>
+<th>월드</th>
+<td colspan="3">
+    <div class="world_chanal">
+        <span>일반 월드</span>
+        <ul class="word_chk_wrap2" style=" max-height:138px; ">
+                <li class=active><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_1.png" alt="전체월드" />전체월드</a><input type="radio" name="world_radio" value="0" checked=checked /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_4.png" alt="오로라" />오로라</a><input type="radio" name="world_radio" value="3"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_5.png" alt="레드" />레드</a><input type="radio" name="world_radio" value="4"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_6.png" alt="이노시스" />이노시스</a><input type="radio" name="world_radio" value="5"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_7.png" alt="유니온" />유니온</a><input type="radio" name="world_radio" value="6"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="스카니아" />스카니아</a><input type="radio" name="world_radio" value="7"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_9.png" alt="루나" />루나</a><input type="radio" name="world_radio" value="8"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_10.png" alt="제니스" />제니스</a><input type="radio" name="world_radio" value="9"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_11.png" alt="크로아" />크로아</a><input type="radio" name="world_radio" value="10"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_12.png" alt="베라" />베라</a><input type="radio" name="world_radio" value="11"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_13.png" alt="엘리시움" />엘리시움</a><input type="radio" name="world_radio" value="12"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_14.png" alt="아케인" />아케인</a><input type="radio" name="world_radio" value="13"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_15.png" alt="노바" />노바</a><input type="radio" name="world_radio" value="14"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_16.png" alt="버닝" />버닝</a><input type="radio" name="world_radio" value="15"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_17.png" alt="버닝2" />버닝2</a><input type="radio" name="world_radio" value="16"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_18.png" alt="버닝3" />버닝3</a><input type="radio" name="world_radio" value="17"  /></li>
+                <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_19.png" alt="버닝4" />버닝4</a><input type="radio" name="world_radio" value="18"  /></li>
+        </ul>
+    </div>
+    <div class="world_chanal">
+        <span>리부트 월드</span>
+        <ul class="word_chk_wrap2">
+            <!--선택된 선택자 class active 추가-->
+                    <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_1.png" alt="전체월드" />전체월드</a><input type="radio" name="world_radio" value="254"  /></li>
+                    <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_2.png" alt="리부트2" />리부트2</a><input type="radio" name="world_radio" value="1"  /></li>
+                    <li ><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_3.png" alt="리부트" />리부트</a><input type="radio" name="world_radio" value="2"  /></li>
+        </ul>
+    </div>
+</td>
+        </tr>
+        <tr>
+
+
+<th>직업</th>
+<td>
+    <div class="rank_sel_custom">
+        <a class="select_text" href="#a">전체 직업</a>
+        <ul>
+            <li class=active><a href="#a">전체 직업</a></li>
+                    <li><a href="#a">초보자</a></li>
+                    <li><a href="#a">전사</a></li>
+                    <li><a href="#a">마법사</a></li>
+                    <li><a href="#a">궁수</a></li>
+                    <li><a href="#a">도적</a></li>
+                    <li><a href="#a">해적</a></li>
+                    <li><a href="#a">기사단</a></li>
+                    <li><a href="#a">아란</a></li>
+                    <li><a href="#a">에반</a></li>
+                    <li><a href="#a">레지스탕스</a></li>
+                    <li><a href="#a">메르세데스</a></li>
+                    <li><a href="#a">팬텀</a></li>
+                    <li><a href="#a">루미너스</a></li>
+                    <li><a href="#a">카이저</a></li>
+                    <li><a href="#a">엔젤릭버스터</a></li>
+                    <li><a href="#a">제로</a></li>
+                    <li><a href="#a">은월</a></li>
+                    <li><a href="#a">키네시스</a></li>
+                    <li><a href="#a">카데나</a></li>
+                    <li><a href="#a">일리움</a></li>
+                    <li><a href="#a">아크</a></li>
+                    <li><a href="#a">호영</a></li>
+                    <li><a href="#a">아델</a></li>
+                    <li><a href="#a">카인</a></li>
+                    <li><a href="#a">라라</a></li>
+        </ul>
+        <select name="job" id="">
+            <option value="255" selected=selected>전체 직업</option>
+                    <option value="0">초보자</option>
+                    <option value="1">전사</option>
+                    <option value="2">마법사</option>
+                    <option value="3">궁수</option>
+                    <option value="4">도적</option>
+                    <option value="5">해적</option>
+                    <option value="6">기사단</option>
+                    <option value="7">아란</option>
+                    <option value="8">에반</option>
+                    <option value="10">레지스탕스</option>
+                    <option value="11">메르세데스</option>
+                    <option value="12">팬텀</option>
+                    <option value="13">루미너스</option>
+                    <option value="14">카이저</option>
+                    <option value="15">엔젤릭버스터</option>
+                    <option value="17">제로</option>
+                    <option value="18">은월</option>
+                    <option value="20">키네시스</option>
+                    <option value="21">카데나</option>
+                    <option value="22">일리움</option>
+                    <option value="23">아크</option>
+                    <option value="24">호영</option>
+                    <option value="25">아델</option>
+                    <option value="26">카인</option>
+                    <option value="28">라라</option>
+        </select>
+    </div>
+</td>
+<th>전직</th>
+<td>
+    <div class="rank_sel_custom">
+        <a class="select_text" href="#a">전체 전직</a>
+        <ul>
+                    <li><a href="#a">전체 전직</a></li>
+
+        </ul>
+        <select name="jobdetail" id="">
+                    <option value="255">전체 전직</option>
+
+        </select>
+    </div>
+</td>
+        </tr>
+    </table>
+</div>
+<!--rank_nav-->
+<div class="rank_nav">
+    <ul class="now_navi">
+        <li>월드 랭킹</li>
+        <li>종합 랭킹</li>
+            <li>전체월드</li>
+        
+        <li>전체 직업</li>
+        <li>전체 전직</li>
+    </ul>
+<div class="ranking_search_bar" style="float:right;">
+    <span class="word_input ranking_search_bar_input" style="margin-top:0;">
+        <input type="text" name="search_text" value="종로구심셔틀" />
+        <span class="btn"><a href="javascript:void(0)" onmouseover="ch_png_on(this)" onmouseout="ch_png_off(this)"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/board_top_search_btn_off.png" alt=""></a></span>
+    </span>
+    <span class="sort_wrap fix_sort" style="margin-top:0;">
+            <a href="#a" class="cus_sel_a">캐릭터 랭킹 검색</a>
+    </span>
+</div>
+
+</div>
+                    <div>
+                            <div class="rank_table_wrap">
+                                <table class="rank_table">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col width="170px">
+                                        <col width="352px">
+                                        <col width="200px">
+                                        <col width="132px">
+                                        <col width="197px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>순위</th>
+                                            <th>캐릭터 정보</th>
+                                            <th>레벨</th>
+                                            <th>경험치</th>
+                                            <th>인기도</th>
+                                            <th>길드</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73551                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-64                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/DDCEOKMNHIPBBPNCBLMMKFGOJGAJFOENGHHHFGHCBDHPJOGFBCFHALJOLFCGGDGKECCJPEOIAABLPLILHGJJKECKFMPBGPIAOJFGEGMMMOMGCJKGEBPGLPFOMCIJHMGLGBEAHDAOFIFBAKGBDLMMADJKIHBIKPAJMGBOBOEANFEFOPPHJPKCILKLONNCAAOBGKPINCOHNMLKEKJBNEELFJPHDLPOPJLMHPJDPLBJBLPKJJJODOGGOCHPEOHLGHJE.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ec%87%bc%ed%8a%b8%ec%8a%a4%ed%82%a4?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhbBJLc5uSBPfj0yYtUDvBkvtgGQXy6v3RsD70MQS891HGiOq03cExBtDiDq2akyP14HbEkbHfEtPm6pAyx2xwSxVMfOQKQV1vrHk8pwo%2bQzH0n2BcFuHRd7mOJzKGJjJMwLc1sGYTIDfAZ9v%2f9P7vkM" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />쇼트스키</a></dt>
+                                                        <dd>마법사 / 비숍</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,908,969,853,721</td>
+                                                <td>5</td>
+                                                <td>coco</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73552                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-133                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/AJMILKALHKIANDJBLMIIALODFEMBGKAGIOELAGEPICACPKFKEBKOICIMFDOIBDLDCFMNDMEJEEAMJMBOEJABIIEANPGKLLHIHJEJNFBHCHLOHOHMPKCHEMCBPIJOBAKJKMMLPOFNNEGKAFABACBGMPNOOAIPIGFFCFPNDIPBFGALDFLEKHCHFNIKMBMFBLBPNDDILCMNCBOAICDHINJHGMOECFEMDFEPGBNNGPJKIBIHJDNBHEFENLCEJIIIFBOO.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ec%84%b8%eb%a3%a8%ed%94%bd?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhZr7uGgYqA70lFSg1s6cZudLVYI7cIjH%2f%2bU%2bEea6yVVWqrg6Yp%2beQ%2bdORODCvWYxRJrK5H98eToYz%2bc4eXdtakpwvkYy8dvP9nEPhUrLkZEJmAXfr3VFee67n%2b%2b036z0m4%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_11.png" alt="" />세루픽</a></dt>
+                                                        <dd>마법사 / 아크메이지(썬,콜)</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,908,230,672,199</td>
+                                                <td>159</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73553                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-107                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/MBIICCCKABPCNFDCCBEJENMGLMBBPECJBLAEDCJJHIGOCJJJNMICGGMMKLCABMLNOJMBHOPHPJEAOINGJMLCEPKAMLBDHJBCAPNOAJMCKBILIENMBPKLLCAPHGLHJDJGDFJIBEDNODOPENPANHOLDCOLBEFGFAHPJIGACNMLGFJEGDHBGCCEEMGCOPJDHIKKOBEHKIEILJCILFAIBJKGHMDILCIIKFBKDDDIHIJDKELCBABDKHIINGEIMHKEJFOL.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%eb%91%a5%ed%9d%91%ec%9a%b0?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhYfn3YrRi2HgeH6CLNbTJ2qVI2jx6P8kg5ZmM1xVaCx5LMhhPtW8YMKBg%2bVgJxRSvo5hxLDgmqa%2bcbcYCHTfcekztELke2EP5U1qcmiSpR1VAOrdBHwo%2fP5j8YCZkhuHHI%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />둥흑우</a></dt>
+                                                        <dd>아델 / 아델</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,907,288,659,174</td>
+                                                <td>173</td>
+                                                <td>밍둥</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73554                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-131                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/ECBPJGBOAEBIGHLFBLMJLBDELNJJJKJBOODOOAHCBDCMDOEFKDJBAABEFBHPOGGBPDLFNLNPNIEKMNLHOJJPEFEGFEPLKLNMCBDCEDHALJGGMIKGNGHLDINMGGIEGANHHPCMHBJDHGPJDEHFNBDDOGIPMIMGNCHIBEPOICNFPHCKKOAFDLFCGPJHFGNMEMDNLEJMAMBELDLKEAPCEGJPELKBDKCIFGFFECLKPJPIPFCMDHPFBLDFMLAPDNGNPEOD.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ea%b4%80%eb%a7%b9?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhac6YzBfe2a4CqxdCb9cUNuUN7bdnAqrz%2bV4gBiOWS%2bF46Wr0fwSAbiHWzMdrkE5guF7%2fU%2fxaP8XyirTJrV5GH1Dn3UWipmYVfGaIUG%2fwFGJb9ptZldKvFVFOi8FZn0OL4%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_9.png" alt="" />관맹</a></dt>
+                                                        <dd>아델 / 아델</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,906,618,738,752</td>
+                                                <td>7</td>
+                                                <td>holiday</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73555                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="up">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/up.png" alt="" />120                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/KMGMHKJHNIJHNMNEFFOHJLDGEKNCCILPMCECPGODJCPLBLODOPGCLHPGBEOFOGEDLDPADNBFJCGPIOGABFBAMHCLINFLADPIOEIFNKDOHHPJHAJJEIFJNACHPMLJEFBGMFADLNGMDDMIEJKLPKJEKAAIGEMCACNALLLAEKJCDOPFFOLAGDCHCLGNECOFLGKPEPFOONLBBHBHFLNPDNMCFIPNNMLNICHCMOIJEPPCBHCOMNAEHMHAPMGELCPFNNAL.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ec%8a%a4%ed%86%a0%eb%a6%ac%eb%83%a5%eb%83%a5?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhagAKjELUgfnoBZaHJxCFVxaiwcijpMUoMFrcOS%2f7147muSMyPQE5DH%2biWMGXu6%2b64jtHCHL0ywoaAWPnkkWFRA8zOkYEkOK%2bsXHyrw92VEJoelKJXQSZH4tRnuszBJ%2bBuN%2bPbwCus5mN4Y6vz57cTH" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />스토리냥냥</a></dt>
+                                                        <dd>키네시스 / 키네시스</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,906,456,626,984</td>
+                                                <td>7</td>
+                                                <td>갸또</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73556                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-132                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/MMPHKNPIFMFGMCAPAHFAFIAIGLJBEMJJECEEKPMNKHDLPMDJKPEIOABJBNHDEBECGFOIBDJCIDEDOOENJCPONIBMHFHDPICFMFKLNNKDHGHHJKEMCAGMIKHFIHJNKEDHKFPDAKINJHKOHCOEIDPOEBFCGKFKOHHPCMPGKIOBIKOJKGMBNHGDKFLODOEMGANIAPOHOFNLJKADMDCMCMNIPDCDAAAIJPIJADMLPGMLFNOJFGIHMOJJKONBPIPALANH.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%eb%8e%90%ec%b0%8c?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhagtqOnIS1tHvUaaQ1ABJwGw%2fidlack5IEz9Y88dPBMWnN5baXwmBaKepEIe1xa%2fdrR1sMA9Epb7j6ywiL1SC8Y8ooqWzPeDIDXjqYi06MuSX1QkXPYDzz5juWe9qpADus%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_12.png" alt="" />뎐찌</a></dt>
+                                                        <dd>아델 / 아델</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,906,139,717,259</td>
+                                                <td>266</td>
+                                                <td>트리</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73557                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-87                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/LBAKHDGJFNEKJKGHGEACMLIECLCDFJEBFLBKEAGHHACCMKMHPKDHIHGJFAANPLDOGJHCJIMNDGCKACAKKEHABPCEGIABOACKCEHPAFDHCKKKJMMGJFJFBDODKPKNNEFHMBJJHDPDFHAPPEHNGCHIGFAOPFINKJHKCFMMODMOIIEHGMHBIKCBBNOHHDOCCGLIEADIEEKIOJBIILBFIDOKJDAJOBIBGBBFHNPAGKEIFHHHPMJDHBFFELGBAJEEHKJH.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%eb%90%a0%eb%a0%88%ed%8a%b8?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhad72L03WhWyoaEpw%2b4wgV1c7DnJP9KOPkvRZRV66en4KjafAQZj8b4UKuUgHyT%2bln%2fLGp25ZxQOG7PQ5fqF26RTfmLuuacAR0PnVUt8M6quOUeec5TKSgldH%2biUK%2ftW6s%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />될레트</a></dt>
+                                                        <dd>전사 / 히어로</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,905,840,120,551</td>
+                                                <td>23</td>
+                                                <td>별빛</td>
+                                            </tr>
+                                            <tr class="search_com_chk">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73558                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round_search.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-133                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round_search.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/IFJFMCFNCLHCCBKBGIINJMMOMIGHNNKDEBLGEKIJGCNONOCBBNHLDABKNCANMCHIFPOLKMLLFEDHFJAOBODJFFEKGKNEKNEBHJEAIFHDHNIHFPFOHHANJMDCMCODBJGAJHNFAFPADKAFEKGCPJOAGPBNLIBELIKDAHNODBPFGHJEHPLHEEEPDFFELFKFOCEEPNJGFOOMMKMEIPECKABINFPLECMFAKNEOEBPGKHFCHJKPMIFCDHMHCKPMFBBEAIN.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other_search.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ec%a2%85%eb%a1%9c%ea%b5%ac%ec%8b%ac%ec%85%94%ed%8b%80?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhYmKj7HIcA9HN%2fAR9hGeFImLolSr4kJ2hDueDz0LqE7v79i3GbatFeGz70QofdzQpiFB2ZNfZWBQ6vGw%2fH9Y561Y7b75Vup%2fEL2h5axN0AQEhesoT4yKVucnPEhPwGJL71gWuULXMuAHJLvYJFsCwBc" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_13.png" alt="" />종로구심셔틀</a></dt>
+                                                        <dd>마법사 / 비숍</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,905,353,465,412</td>
+                                                <td>791</td>
+                                                <td>단풍들</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73559                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="down">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/down.png" alt="" />-47                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/LKBFIDIAOBNALBHLLGLJIKBJBOMBEBHNKKOKOIFPPPGKJDBNJPMJLDLIGHABIIHPILIBNEHNKAKDHDEFGPNGBLCCCFEEPGPFCPDBIHOMEHJJBKDGFANCEFMEDAEEMLIKDKOGBNKJDIIGDNANHJCHLEEIPLAJICDJHBHMFKPCIKLGALOFGMPMAJEPLMEOAEFIMHBAGFMKNNEHKOCFIJPFAAIBABAPANEBPCALMOOALPKNKBECENIEEIDMAIKPENBH.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%ec%a3%bc%ed%98%81?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhancOTW3LfHIkDj3h8NHX3hBS87Qq6hz%2fublfkzd01tNX%2fJbOf%2bowL0z%2b08Y%2biBcZ%2bRwlytfY8VqCTzXeZE6%2fcupFHiszDR0dvqSxegKigo%2fsOyXG80ZhOKH%2fs9UGcSVXA%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />주혁</a></dt>
+                                                        <dd>도적 / 섀도어</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,905,092,095,324</td>
+                                                <td>35</td>
+                                                <td>여백</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <p class=&#39;ranking_other&#39;>
+73560                                                    </p>
+                                                    <p class="flu">
+                                                        <span class="up">
+                                                            <img class="left" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/l_round.png" alt="" />
+                                                                <img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/up.png" alt="" />36                                                            <img class="right" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/r_round.png" alt="" />
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td class="left">
+                                                    <span class="char_img">
+                                                        <img class="" src="https://avatar.maplestory.nexon.com/Character/180/AEBGDLFIAPFKLLFKDGEHAHPLJBLFGGDJAEDMDFBFJOLLGDLCDNLOMPDIILHGEDOOKAHNPJFBJFIBGBHABPCPPCHNINKCCHDFAIGKLMIDPAFDPDIPCJPLKMKNAGLLOPGJJKIHIFCNEIFPNNOLKDJOILKBBDANPDMOEFMIJDDOMOMIACJEBNLNIPLPJHDEKGOIPFODFGIDDNDGFCHCKINDJIBLFGHOBHONAPAKNBIOKKKDGBFDPJMIJDPCMEPBBGEP.png" alt="" onerror="this.src='https://ssl.nexon.com/s2/game/maplestory/renewal/common/no_char_img_180.png'" />
+                                                            <img class="bg" src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_other.png" alt="캐릭터 BG" />
+                                                    </span>
+                                                    <dl>
+                                                        <dt><a href="/Common/Character/Detail/%eb%a6%b0%eb%9e%91?p=mikO8qgdC4hElCwBGQ6GOx8CmO11EvduZkV0bRbPAhaLcqWGISz5zbGtrroe4jYfyJjMrav2wOwHTmm5524NMxobqyDd%2fuJgZfLxWDykTSpqgTmq8yVrPg2TZ2FM2uaYxM8LtWJ5jSpGxEc6kp1%2f86hLNCO%2f%2fPxfF5WqKPgB3pU%3d" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/world_icon/icon_8.png" alt="" />린랑</a></dt>
+                                                        <dd>키네시스 / 키네시스</dd>
+                                                    </dl>
+                                                </td>
+                                                <td>Lv.263</td>
+                                                <td>1,905,085,536,055</td>
+                                                <td>1,736</td>
+                                                <td>눈길</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 종합랭킹 : End -->
+
+<div class="page_numb">
+        <span class="cm_all_prev">
+                <a href="/Ranking/World/Total?page=7341"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/cm_all_prev.png" alt="이전 10개" /></a>
+        </span>
+    <span class="cm_prev">
+            <a href="/Ranking/World/Total?page=7355"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/cm_prev.png" alt="이전" /></a>
+    </span>
+                <a href="/Ranking/World/Total?page=7351">7351</a>
+                <a href="/Ranking/World/Total?page=7352">7352</a>
+                <a href="/Ranking/World/Total?page=7353">7353</a>
+                <a href="/Ranking/World/Total?page=7354">7354</a>
+                <a href="/Ranking/World/Total?page=7355">7355</a>
+                <a class="active">7356</a>
+                <a href="/Ranking/World/Total?page=7357">7357</a>
+                <a href="/Ranking/World/Total?page=7358">7358</a>
+                <a href="/Ranking/World/Total?page=7359">7359</a>
+                <a href="/Ranking/World/Total?page=7360">7360</a>
+
+    <span class="cm_next">
+            <a href="/Ranking/World/Total?page=7357"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/cm_next.png" alt="다음" /></a>
+    </span>
+        <span class="cm_all_next">
+                <a href="/Ranking/World/Total?page=7361"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/cm_all_next.png" alt="다음 10개" /></a>
+        </span>
+</div>                    </div>
+                </div>
+                <!-- notice_wrap end -->
+            </div>
+            <!-- div_inner end -->
+        </div>
+        <!-- container end -->
+<!-- footer str -->
+<script>
+    $(document).ready(function () {
+        //$('.familysite_list a:eq(1)').click(function (e) {
+        //    e.preventDefault();
+        //    window.open($(e.currentTarget).attr('href'), 'mapleDS', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizeable=no,copyhistory=no, width=1015, height=596');
+        //});
+        $('.footer_info ul a:eq(3)').click(function (e) {
+            e.preventDefault();
+            window.open($(e.currentTarget).attr('href'), $(e.currentTarget).text(), 'width=500, height=450; scrollbars=yes');
+        });
+        $('.licensee a').click(function (e) {
+            e.preventDefault();
+            window.open($(e.currentTarget).attr('href'), 'communicationViewPopup', 'width=750, height=700; scrollbars=yes');
+        });
+    });
+</script>
+
+<div id="footer"  style="">
+    <div class="div_inner">
+        <div class="family_site_wrap">
+            <span class="familysite_select">
+                <a href="#a" onclick="family_site()">Family Site</a>
+                <span class="family_arrow"><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/family_site_arrow.png" alt="" /></a></span>
+            </span>
+            <div class="familysite_list">
+                <ul class="language">
+                    <li><a href="http://www.maplestory.com/" target="_blank">Global</a></li>
+                    <li><a href="https://maplestory.nexon.co.jp" target="_blank">Japan</a></li>
+                    <li><a href="http://mxd.sdo.com/web5/home/home.asp" target="_blank">China</a></li>
+                    <li><a href="http://tw.beanfun.com/maplestory/" target="_blank">Taiwan</a></li>
+                </ul>
+                <ul class="country">
+                    <li><a href="http://www.maplesea.com/" target="_blank">S.E.A</a></li>
+                    <li><a href="http://maplestory.nexon.net/" target="_blank">North America</a></li>
+                    <li><a href="https://th.nexon.com/maplestory/th/home/home.aspx/" target="_blank">Thailand</a></li>
+                </ul>
+                <ul class="maple_list">
+                    <li><a href="/Testworld/Main">Maple Tester</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer_info">
+            <ul>
+                <li><a href="http://company.nexon.com/?ST=nexon&PS=footer" target="_blank">회사소개</a></li>
+                <li><a href="http://career.nexon.com/" target="_blank">채용안내</a></li>
+                <li><a href="https://member.nexon.com/policy/stipulation.aspx" target="_blank">이용약관</a></li>
+                <li><a href="/Common/Footer/GameGrade">게임이용등급안내</a></li>
+                
+                <li><a href="https://member.nexon.com/policy/privacy.aspx" target="_blank" style="font-weight:bold; color:#fff;">개인정보처리방침</a></li>
+                <li><a href="https://member.nexon.com/policy/youthprotection.aspx" target="_blank">청소년보호정책</a></li>
+                <li><a href="/Common/Footer/OperationPolicy" target="_blank">운영정책</a></li>
+                <li><a href="http://pcbang.nexon.com/?ST=nexon&PS=footer" target="_blank">넥슨PC방</a></li>
+                <li><a href="/Common/Footer/SiteMap" target="_blank">사이트맵</a></li>
+            </ul>
+            <p>
+                <span>(주)넥슨코리아 대표이사</span>
+                <span style="margin-left:5px;">이정헌 경기도 성남시 분당구판교로 256번길 7</span>
+                <span style="margin-left:5px;">전화: 1588-7701</span>
+                <span>팩스:0502-258-8322</span>
+                <br />
+                <span>E-mail:contact-us@nexon.co.kr</span>
+                <span style="margin-left:5px;">사업자등록번호 : 220-87-17483호</span>
+                <span style="margin-left:5px;">통신판매업 신고번호 : 제2013-경기성남-1659호</span>
+                <span class="licensee" style="margin-left:5px;"><a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2208717483">사업자정보확인</a></span>
+            </p>
+            <span class="copyright">ⓒ NEXON Korea Corporation All Rights Reserved.</span>
+            <span class="footer_logo">
+                <a href="https://www.nexon.com" target="_blank"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/footer_logo.png" alt="" /></a>
+            </span>
+        </div>
+    </div>
+</div>
+    <div class="fix_toon_control">
+        <ul>
+            <li class="top_btn"><a href="#a" onclick="top_move();"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/media/top_toon_btn.png" alt="TOP"></a></li>
+        </ul>
+    </div>
+
+
+<!-- footer end -->
+    </div>
+<!--랭킹 팝업 : Str-->
+<div class="rank_popup_wrap">
+    <div class="rank_popup">
+        <h1><span><a href="#a"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_popup_h1.png" alt="메이플스토리 랭킹 산정 방법" /></a></span></h1>
+        <div class="rank_pop_con">
+            <h2>종합랭킹</h2>
+            <p>10레벨 이상의 모든 캐릭터가 랭킹에 등록됩니다.<br /> 캐릭터의 레벨, 경험치를 기준으로 하며 결과가 같을 경우, 달성한 시간 순으로 순위가 결정됩니다.<br /> 제로 캐릭터가 189레벨 이하인 경우에는 랭킹에 등록되지 않습니다.</p>
+            <h2>인기도 랭킹</h2>
+            <p>인기도 랭킹은 인기도가 높은 순으로 순위가 결정됩니다. <br />제로 캐릭터가 190레벨 이하인 경우에는 랭킹에 등록되지 않습니다.</p>
+            <h2>길드랭킹</h2>
+            <p>길드 랭킹은 명성치를 기준으로 순위가 결정됩니다.<br />길드 랭킹은 매주 월요일 0시에 초기화되며, 홈페이지 랭킹 순위는 다음날 오전 중 갱신됩니다.<br />(월요일은 전 주 랭킹 순위, 화요일부터 이번주 랭킹 순위가 반영됩니다.)</p>
+            <h2>메이플 유니온</h2>
+            <p>유니온 대표 캐릭터는 선택한 월드의 최고 레벨 캐릭터입니다. <br />랭킹은 유니온 레벨을 기준으로 하며 결과가 같을 경우, 전투력 순으로 순위가 결정됩니다.</p>
+            <h2>업적 랭킹</h2>
+            <p>업적 랭킹은 메이플ID 내 캐릭터들의 업적 점수를 기준으로 산정되며, 매주 월요일 오전에 갱신됩니다.</p>
+            <div class="rank_pop_close"><a href="#a" onclick="close_rank_pop();"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/rank_pop_close_btn.png" alt="닫기" /></a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

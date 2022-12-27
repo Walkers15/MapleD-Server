@@ -6,11 +6,12 @@ module.exports = {
   plugins: ["@typescript-eslint/eslint-plugin", "unused-imports"],
   extends: ["plugin:@typescript-eslint/recommended", "prettier"],
   rules: {
+    "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "unused-imports/no-unused-imports-ts": "error",
     "@typescript-eslint/explicit-function-return-type": "error",
     "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 1 }],
+    quotes: ["error", "double"]
   },
 };

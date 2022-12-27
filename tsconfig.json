@@ -8,8 +8,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": ".",
+    "outDir": "dist",
+    "baseUrl": "src",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -24,5 +24,6 @@
     //   "@libs/date/*": ["libs/date/src/*"]
     // }
   },
-  "include": ["src/**/*", ".eslintrc.js"]
+  "include": ["src/**/*", ".eslintrc.js"],
+  "exclude": ["node_modules"]
 }
