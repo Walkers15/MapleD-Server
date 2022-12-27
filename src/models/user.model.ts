@@ -20,9 +20,9 @@ const userSchema: mongoose.Schema = new mongoose.Schema<IUser>(
   }
 );
 
-const User: mongoose.Model<IUser> = mongoose.model<IUser>("User", userSchema);
+export const User: mongoose.Model<IUser> = mongoose.model<IUser>("User", userSchema);
 
-export async function makeUser(username: string): Promise<IUser> {
+export async function addUser(username: string): Promise<IUser> {
   const user = new User({
     username,
   });
