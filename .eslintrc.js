@@ -7,16 +7,6 @@ module.exports = {
   plugins: ["@typescript-eslint/eslint-plugin", "unused-imports"],
   extends: ["plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier"],
   rules: {
-    "@typescript-eslint/typedef": [
-      "error",
-      {
-        arrowParameter: true,
-        memberVariableDeclaration: true,
-        parameter: true,
-        propertyDeclaration: true,
-        variableDeclaration: true,
-      },
-    ],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/no-explicit-any": "error",
