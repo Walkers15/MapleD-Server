@@ -1,6 +1,7 @@
 import { Router } from "express";
+import { DiaryCharacter } from "../models/diaryCharacter.model";
 import { searchedCharacter } from "../models/searchedCharacter.model";
-import { CharacterInfo, getCharacterInfo } from "../tools/crawler";
+import { getCharacterInfo } from "../tools/crawler";
 // import axios from 'axios';
 // import { RANKING_SEARCH } from "../Constant/Constant";
 
@@ -23,8 +24,7 @@ searchRouter.route("/:nickname").get(async (req, res) => {
       }
     } else {
       // 캐릭터가 존재하는 경우 크롤링 데이터를 가져옴
-      // TODO 크롤링 데이터 가져오기 구현
-      res.json({ message: "정보 블라블라" });
+      res.json({ message: await DiaryCharacter.find({ nickname: req.params.nickname }) });
     }
   } catch (error) {
     res.json(error);

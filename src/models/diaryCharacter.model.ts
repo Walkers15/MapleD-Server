@@ -66,7 +66,7 @@ const dirayCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
   }
 );
 
-export const DiaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCaharacter", dirayCharacterSchema);
+export const DiaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", dirayCharacterSchema);
 
 export async function registerCharacter(baseCharacterInfo: ISearchedCharacter): Promise<IDiaryCharacter> {
   const characterDetail = await getCharacterDetail(baseCharacterInfo.nickname, `${HOME}${baseCharacterInfo.detailURL}`);
