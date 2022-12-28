@@ -1,8 +1,7 @@
 import * as cheerio from "cheerio";
 import axios from "axios";
-import { readFile, writeFile } from "fs/promises";
-import { HOME, RANKING_SEARCH } from "../Constant/Constant";
-import { addSearchedCharacter } from "../models/searchedCharacter.model";
+import { RANKING_SEARCH } from "../Constant/Constant";
+import { addSearchedCharacter, searchedCharacter } from "../models/searchedCharacter.model";
 import { IDiaryCharacter } from "../models/diaryCharacter.model";
 
 interface INonExistCharacterInfo {
@@ -41,7 +40,11 @@ export async function getCharacterInfo(nickname: string): Promise<CharacterInfo>
       detailURL: `${target.find("dt").find("a").attr("href")}`,
     };
 
-    await addSearchedCharacter(characterInfo.nickname, characterInfo.detailURL);
+    console.log(await searchedCharacter.findOne({ nickname }));
+    if (!(await searchedCharacter.findOne({ nickname }))) {
+      console.log("add seached character");
+      await addSearchedCharacter(characterInfo.nickname, characterInfo.detailURL);
+    }
   } else {
     console.log("캐릭터 없음 ㅠ");
     characterInfo = {

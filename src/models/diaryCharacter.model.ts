@@ -26,39 +26,30 @@ const dirayCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
     },
     level: {
       type: Number,
-      required: true,
     },
     exp: {
       type: Number,
-      required: true,
     },
     meso: {
       type: Number,
-      required: true,
     },
     str: {
       type: Number,
-      required: true,
     },
     dex: {
       type: Number,
-      required: true,
     },
     int: {
       type: Number,
-      required: true,
     },
     luk: {
       type: Number,
-      required: true,
     },
     statAttack: {
       type: Number,
-      required: true,
     },
     bossAttack: {
       type: String,
-      required: true,
     },
   },
   {
@@ -66,10 +57,10 @@ const dirayCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
   }
 );
 
-export const DiaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", dirayCharacterSchema);
+export const diaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", dirayCharacterSchema);
 
 export async function registerCharacter(baseCharacterInfo: ISearchedCharacter): Promise<IDiaryCharacter> {
   const characterDetail = await getCharacterDetail(baseCharacterInfo.nickname, `${HOME}${baseCharacterInfo.detailURL}`);
-  const result = await new DiaryCharacter(characterDetail).save();
+  const result = await new diaryCharacter(characterDetail).save();
   return result;
 }
