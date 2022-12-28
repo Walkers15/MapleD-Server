@@ -6,7 +6,8 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import { registerRouter } from "./routes/register";
 import { searchRouter } from "./routes/search";
-
+import { refreshDiary } from "./tools/crawler";
+import cron from "node-cron";
 console.log("Server Restart");
 
 config();
@@ -18,6 +19,7 @@ const connection: mongoose.Connection = mongoose.connection;
 
 connection.once("open", async () => {
   console.log("MongoDB database connection established successfully");
+  cron.schedule("1 * * * *", refreshDiary);
 });
 
 const app: core.Express = express();

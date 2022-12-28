@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import axios from "axios";
 import { RANKING_SEARCH } from "../Constant/Constant";
 import { addSearchedCharacter, searchedCharacter } from "../models/searchedCharacter.model";
-import { IDiaryCharacter } from "../models/diaryCharacter.model";
+import { diaryCharacter, IDiaryCharacter, registerCharacter } from "../models/diaryCharacter.model";
 
 interface INonExistCharacterInfo {
   isExist: false;
@@ -39,7 +39,7 @@ export async function getCharacterInfo(nickname: string): Promise<CharacterInfo>
 
     console.log(await searchedCharacter.findOne({ nickname }));
     if (!(await searchedCharacter.findOne({ nickname }))) {
-      console.log("add seached character");
+      console.log("add searched character");
       await addSearchedCharacter(characterInfo.nickname, characterInfo.detailURL);
     }
   } else {
@@ -74,4 +74,24 @@ export async function getCharacterDetail(nickname: string, detailURL: string): P
 
   console.log(characterDetail);
   return characterDetail;
+}
+
+export async function refreshDiary(): Promise<void> {
+  const diaryCharacters = await diaryCharacter.find({});
+  const searchedCharacters = await searchedCharacter.find({});
+
+  const refreshCharacters = [...new Set(diaryCharacters.map(character => character.nickname))];
+
+  for (const nickname of refreshCharacters) {
+    const detailURL = (searchedCharacters.find(character => character.nickname === nickname)).detailURL;
+    console.log(detailURL, nickname);
+    await registerCharacter({ detailURL, nickname });
+    await delay(1000);
+  }
+}
+
+function delay(time: number): Promise<unknown> {
+  return new Promise(resolve => {
+    setTimeout(resolve, time);
+  });
 }

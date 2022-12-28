@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/typedef */
 import mongoose from "mongoose";
 
-export interface ISearchedCharacter extends mongoose.Document {
+export interface ISearchedCharacter {
   nickname: string;
   detailURL: string;
 }

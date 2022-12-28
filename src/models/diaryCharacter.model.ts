@@ -17,7 +17,7 @@ export interface IDiaryCharacter {
   bossAttack: string;
 }
 
-const dirayCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacter>(
+const diaryCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacter>(
   {
     nickname: {
       type: String,
@@ -57,7 +57,7 @@ const dirayCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
   }
 );
 
-export const diaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", dirayCharacterSchema);
+export const diaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", diaryCharacterSchema);
 
 export async function registerCharacter(baseCharacterInfo: ISearchedCharacter): Promise<IDiaryCharacter> {
   const characterDetail = await getCharacterDetail(baseCharacterInfo.nickname, `${HOME}${baseCharacterInfo.detailURL}`);

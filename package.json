@@ -44,11 +44,13 @@
     "@types/cors": "^2.8.13"
   },
   "dependencies": {
+    "@types/node-cron": "^3.0.7",
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.8.1"
+    "mongoose": "^6.8.1",
+    "node-cron": "^3.0.2"
   }
 }
