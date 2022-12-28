@@ -19,14 +19,11 @@ export type CharacterInfo = INonExistCharacterInfo | IExistCharacterInfo;
 
 export async function getCharacterInfo(nickname: string): Promise<CharacterInfo> {
   const rankingHTML = (await axios.get<string>(`${RANKING_SEARCH}?c=${encodeURI(nickname)}`)).data;
-  // const rankingHTML = await readFile("./rankHTML.html");
   const isCharacterExist = !rankingHTML.includes("랭킹정보가 없습니다.");
   let characterInfo: CharacterInfo = null;
   if (isCharacterExist) {
     console.log("캐릭터 있음!!");
-    // console.log(rankingHTML);
     const $ = cheerio.load(rankingHTML);
-    // console.log($('.search_com_chk').text());
     const target = $(".search_com_chk");
     console.log(target.find("dt").text());
     console.log(target.find("dd").text());
@@ -57,13 +54,8 @@ export async function getCharacterInfo(nickname: string): Promise<CharacterInfo>
 
 export async function getCharacterDetail(nickname: string, detailURL: string): Promise<IDiaryCharacter> {
   const detailHTML = (await axios.get<string>(detailURL)).data;
-  // await writeFile("./detailHTML2.html", detailHTML);
-  // const detailHTML = await readFile("./detailHTML2.html");
-  // console.log("detailHTML");
-  // console.log(detailHTML.toString());
 
   const $2 = cheerio.load(detailHTML);
-  // const baseInfo = $2(".char_info").find("span").eq(0).text().slice(3);
   // 9번 메소 13번 스공 19번 힘 21번 덱스 23번 인트 25번 럭 29번 보공
   const detailInfo = $2(".tab01_con_wrap").find("span");
   const statAttack = detailInfo.eq(13).text();

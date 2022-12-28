@@ -1,8 +1,6 @@
 import { Router } from "express";
 import { diaryCharacter } from "../models/diaryCharacter.model";
 import { getCharacterInfo } from "../tools/crawler";
-// import axios from 'axios';
-// import { RANKING_SEARCH } from "../Constant/Constant";
 
 export const searchRouter = Router();
 

@@ -35,6 +35,6 @@ export async function addSearchedCharacter(nickname: string, detailURL: string):
   });
   await user.save();
 
-  console.log(user.nickname); // 'Bill'
+  console.log(user.nickname);
   return user;
 }
