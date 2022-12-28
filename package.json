@@ -39,12 +39,11 @@
     "ts-loader": "9.4.1",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.1.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "@types/cheerio": "^0.22.31",
+    "@types/cors": "^2.8.13"
   },
   "dependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/cheerio": "^0.22.31",
-    "@types/cors": "^2.8.13",
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",

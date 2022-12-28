@@ -1,42 +1,25 @@
 import { Router } from "express";
-import { addCharacter } from "../models/character.model";
+import { DiaryCharacter, registerCharacter } from "../models/diaryCharacter.model";
+import { searchedCharacter } from "../models/searchedCharacter.model";
 
 export const registerRouter = Router();
 
 registerRouter.route("/").post(async (req, res) => {
   try {
-    const nickname = req.body.nickname;
-    // 메이플에 해당 캐릭터가 존재하는지 확인
-    const newUser = await addCharacter(nickname);
-    // 투두 크롤링 구현
-    res.json(`User added! ${newUser.nickname}`);
+    const targetCharacter = await searchedCharacter.findOne({ nickname: req.body.nickname });
+    if (targetCharacter) {
+      const alreadyExist = await DiaryCharacter.findOne({ nickname: req.body.nickname });
+      if (alreadyExist) {
+        res.status(500);
+        res.json({ message: "이미 등록된 캐릭터입니다" });
+      } else {
+        console.log("등록시도");
+        const result = await registerCharacter(targetCharacter);
+        res.json(`User added! ${result.nickname}`);
+      }
+    }
   } catch (error) {
     res.status(500);
     res.json(error);
   }
-
 });
-
-// registerRouter.route("/:name").post(async (req, res) => {
-//   const newName = req.body.newname;
-
-//   try {
-//     const user = await Character.findOne({ nickname: req.params.name });
-
-//     if (!user) {
-//       res.json(`Cannot find user Name: ${req.params.name}`);
-//       return;
-//     }
-
-//     console.log(`change ${user.nickname} to ${newName}`);
-
-//     user.nickname = newName;
-//     const newUser = await user.save();
-//     console.log(`change to ${newUser.nickname} success!`);
-
-//     res.json(`change to ${newUser.nickname} success!`);
-//   } catch (error) {
-//     console.error(error);
-//     res.json(error);
-//   }
-// });
