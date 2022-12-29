@@ -19,7 +19,7 @@ const connection: mongoose.Connection = mongoose.connection;
 
 connection.once("open", async () => {
   console.log("MongoDB database connection established successfully");
-  cron.schedule("*/5 * * * *", refreshDiary);
+  cron.schedule("7 3 */1 * *", refreshDiary);
 });
 
 const app: core.Express = express();
