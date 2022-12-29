@@ -37,11 +37,8 @@ export async function getCharacterInfo(nickname: string): Promise<CharacterInfo>
       detailURL: `${target.find("dt").find("a").attr("href")}`,
     };
 
-    console.log(await searchedCharacter.findOne({ nickname }));
-    if (!(await searchedCharacter.findOne({ nickname }))) {
-      console.log("add searched character");
-      await addSearchedCharacter(characterInfo.nickname, characterInfo.detailURL);
-    }
+    await searchedCharacter.deleteOne({ nickname });
+    await addSearchedCharacter(characterInfo.nickname, characterInfo.detailURL);
   } else {
     console.log("캐릭터 없음 ㅠ");
     characterInfo = {
@@ -78,14 +75,14 @@ export async function getCharacterDetail(nickname: string, detailURL: string): P
 
 export async function refreshDiary(): Promise<void> {
   const diaryCharacters = await diaryCharacter.find({});
-  const searchedCharacters = await searchedCharacter.find({});
-
   const refreshCharacters = [...new Set(diaryCharacters.map(character => character.nickname))];
-
   for (const nickname of refreshCharacters) {
-    const detailURL = (searchedCharacters.find(character => character.nickname === nickname)).detailURL;
-    console.log(detailURL, nickname);
-    await registerCharacter({ detailURL, nickname });
+    // getCharacterInfo를 통해 새로운 URL 갱신
+    const characterInfo = await getCharacterInfo(nickname);
+    if (characterInfo.isExist) {
+      console.log(characterInfo.detailURL, characterInfo.nickname);
+      await registerCharacter({ detailURL: characterInfo.detailURL, nickname });
+    }
     await delay(1000);
   }
 }
