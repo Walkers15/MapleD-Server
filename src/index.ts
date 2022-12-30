@@ -8,6 +8,7 @@ import { registerRouter } from "./routes/register";
 import { searchRouter } from "./routes/search";
 import { refreshDiary } from "./tools/crawler";
 import cron from "node-cron";
+import { gptRouter } from "./routes/gpt";
 console.log("Server Restart");
 
 config();
@@ -31,6 +32,7 @@ app.use(morgan("tiny"));
 
 app.use("/register", registerRouter);
 app.use("/search", searchRouter);
+app.use("/gpt", gptRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
