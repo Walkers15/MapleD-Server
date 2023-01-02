@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/typedef */
 import mongoose from "mongoose";
-import { HOME } from "../Constant/Constant";
-import { getCharacterDetail } from "../tools/crawler";
+import { getCharacterDetail, getMuLungAndUnionFromGG, getMuLungAndUnionFromMaple } from "../tools/crawler";
 import { ISearchedCharacter } from "./searchedCharacter.model";
 
 export interface IDiaryCharacter {
   nickname: string;
+  job: string;
   level: number;
   exp: number;
   meso: number;
@@ -15,6 +15,10 @@ export interface IDiaryCharacter {
   luk: number;
   statAttack: number;
   bossAttack: string;
+  muLung: number;
+  union: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 const diaryCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacter>(
@@ -23,6 +27,9 @@ const diaryCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
       type: String,
       required: true,
       minlength: 2,
+    },
+    job: {
+      type: String,
     },
     level: {
       type: Number,
@@ -51,6 +58,12 @@ const diaryCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
     bossAttack: {
       type: String,
     },
+    muLung: {
+      type: Number,
+    },
+    union: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
@@ -59,8 +72,29 @@ const diaryCharacterSchema: mongoose.Schema = new mongoose.Schema<IDiaryCharacte
 
 export const diaryCharacter: mongoose.Model<IDiaryCharacter> = mongoose.model<IDiaryCharacter>("DiaryCharacter", diaryCharacterSchema);
 
-export async function registerCharacter(baseCharacterInfo: ISearchedCharacter): Promise<IDiaryCharacter> {
-  const characterDetail = await getCharacterDetail(baseCharacterInfo.nickname, `${HOME}${baseCharacterInfo.detailURL}`);
+/**
+ * 메이플스토리 홈페이지에서 캐릭터 정보를 가져와 DB에 저장
+ * 첫 번째 등록의 경우 maple.gg에서 무릉정보를 가져옴
+ * @param baseCharacterInfo
+ * @param isFirstRegister
+ * @returns
+ */
+export async function registerCharacter(baseCharacterInfo: ISearchedCharacter, isFirstRegister: boolean): Promise<IDiaryCharacter> {
+  const characterDetail = await getCharacterDetail(baseCharacterInfo.nickname, baseCharacterInfo.detailURL);
+  if (isFirstRegister) {
+    const { union, muLung } = await getMuLungAndUnionFromGG(baseCharacterInfo.nickname);
+    characterDetail.union = union;
+    characterDetail.muLung = muLung;
+  } else {
+    const { union, muLung } = await getMuLungAndUnionFromMaple(baseCharacterInfo.nickname);
+    if (!muLung) {
+      const muLung = (await getMuLungAndUnionFromGG(baseCharacterInfo.nickname)).muLung;
+      characterDetail.muLung = muLung;
+    } else {
+      characterDetail.muLung = muLung;
+    }
+    characterDetail.union = union;
+  }
   const result = await new diaryCharacter(characterDetail).save();
   return result;
 }

@@ -11,7 +11,17 @@ searchRouter.route("/:nickname").get(async (req, res) => {
     const result = await diaryCharacter.findOne({ nickname });
     if (result) {
       // 캐릭터가 다이어리에 존재하는 경우 크롤링 데이터를 가져옴
-      res.json({ isRegister: true, characterData: await diaryCharacter.find({ nickname: req.params.nickname }) });
+      const characterData = (await diaryCharacter.find({ nickname: req.params.nickname })).sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+      const recentData = characterData[0];
+      res.json({
+        isRegister: true,
+        level: recentData.level,
+        job: recentData.job,
+        nickname: recentData.nickname,
+        muLung: recentData.muLung,
+        union: recentData.union,
+        characterData,
+      });
     } else {
       console.log("캐릭터 없음!!");
       const characterInfo = await getCharacterInfo(nickname);

@@ -17,7 +17,7 @@ registerRouter.route("/").post(async (req, res) => {
         res.json({ message: "이미 등록된 캐릭터입니다" });
       } else {
         console.log("등록시도");
-        await registerCharacter(targetCharacter);
+        await registerCharacter(targetCharacter, true);
         res.json({ characterData: await diaryCharacter.find({ nickname: req.body.nickname }) });
       }
     } else {

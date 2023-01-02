@@ -29,6 +29,7 @@ const searchedCharacterSchema: mongoose.Schema = new mongoose.Schema<ISearchedCh
 export const searchedCharacter: mongoose.Model<ISearchedCharacter> = mongoose.model<ISearchedCharacter>("SearchedCharacter", searchedCharacterSchema);
 
 export async function addSearchedCharacter(nickname: string, detailURL: string): Promise<ISearchedCharacter> {
+  console.log(nickname);
   const user = new searchedCharacter({
     nickname,
     detailURL,
