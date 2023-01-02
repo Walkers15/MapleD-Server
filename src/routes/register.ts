@@ -18,7 +18,17 @@ registerRouter.route("/").post(async (req, res) => {
       } else {
         console.log("등록시도");
         await registerCharacter(targetCharacter, true);
-        res.json({ characterData: await diaryCharacter.find({ nickname: req.body.nickname }) });
+        const characterData = await diaryCharacter.find({ nickname: req.body.nickname });
+        const recentData = characterData[0];
+        res.json({
+          isRegister: true,
+          level: recentData.level,
+          job: recentData.job,
+          nickname: recentData.nickname,
+          muLung: recentData.muLung,
+          union: recentData.union,
+          characterData,
+        });
       }
     } else {
       res.status(500);
